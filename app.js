@@ -54,7 +54,7 @@ mongoose
     `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASSWORD}@cluster0.zunro.mongodb.net/${process.env.DB_NAME}?retryWrites=true&w=majority`
   )
   .then(() => {
-    console.log("Connected");
-    app.listen(5000);
+    // console.log("Connected");
+    app.listen(process.env.PORT || 5000);
   })
   .catch((error) => console.log(error));
